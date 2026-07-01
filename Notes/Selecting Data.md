@@ -1,6 +1,7 @@
 
 ## Models
 
+```js
 model User {
   id        String   @id @default(cuid())
   name      String
@@ -12,7 +13,8 @@ model User {
 
   blogs     Blog[]
 }
-
+```
+```js
 model Blog {
   id        String   @id @default(cuid())
   title     String
@@ -22,8 +24,7 @@ model Blog {
   authorId  String
   author    User @relation(fields: [authorId], references: [id])
 }
-
-
+```
 ## DataBase Tables
 
 | id | name     | email                                     | age | city   | isActive |
